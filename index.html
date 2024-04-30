@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    const webIntegrationId = "wwzaTjlPzKb8V7FIOQHLAbJy0T8Lhsl2";
+    function login() {
+      function isLoggedIn() {
+        return fetch("https://dtsqd.us.qlikcloud.com/api/v1/users/me", {
+          method: 'GET',
+          mode: 'cors',
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+            'qlik-web-integration-id': webIntegrationId,
+          },
+        }).then(response => {
+          return response.status === 200;
+        });
+      }
+      return isLoggedIn().then(loggedIn => {
+        if (!loggedIn) {
+          // check login
+            window.top.location.href = "https://dtsqd.us.qlikcloud.com/login?qlik-web-integration-id=" + webIntegrationId + "&returnto=" + top.location.href;
+          throw new Error('not logged in');
+        }
+      });
+    }
+	login()
+  </script>
+</head>
+
+<body style="height:600px;">
+	<iframe src="https://dtsqd.us.qlikcloud.com/single/?appid=fcede786-2ffb-47fa-8f0f-92429e09c30b&sheet=02307a04-2de3-48f2-b0e7-28cb78a7a37f&theme=horizon&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
+</body>
+
+</html>
