@@ -34,7 +34,7 @@ var config = {
   prefix: "/",
   port: 443,
   isSecure: true,
-  webIntegrationId: "wwzaTjlPzKb8V7FIOQHLAbJy0T8Lhsl2",
+  webIntegrationId: "F40i3sPExdaLCBM4N33F_Zt2dWH6qs2U",
   jwt: `${token}`,
 };
 

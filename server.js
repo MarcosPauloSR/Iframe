@@ -41,7 +41,7 @@ app.post("/generate-token", async (req, res) => {
       iat: Math.floor(Date.now() / 1000),
       exp: Math.floor(Date.now() / 1000) + 60 * 60,
       nbf: Math.floor(Date.now() / 1000),
-      iss: "pu5thqmnfyno428.us.qlikcloud.com",
+      iss: "webMovel",
       aud: "qlik.api/login/jwt-session",
       groups: [
         "Analytics Admin",
@@ -55,7 +55,7 @@ app.post("/generate-token", async (req, res) => {
     };
 
     const options = {
-      keyid: "02dcf10d-59f1-4b40-93bc-863a83bff7ac",
+      keyid: "webMovel",
       algorithm: "RS256",
     };
 
@@ -70,8 +70,9 @@ app.post("/generate-token", async (req, res) => {
   }
 });
 
-// const port = process.env.PORT || 3000;
-const port = process.env.PORT;
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+const port = process.env.PORT || 8080;
+const host = '127.0.0.1'; // Especifica o IP onde o servidor deve rodar
+
+app.listen(port, host, () => {
+  console.log(`Server running on http://${host}:${port}`);
 });
