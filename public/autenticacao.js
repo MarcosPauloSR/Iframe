@@ -30,7 +30,7 @@ async function initializeQlik(token) {
 }
 
 var config = {
-  host: "dtsqd.us.qlikcloud.com",
+  host: "2t54o942nfo22c0.us.qlikcloud.com",
   prefix: "/",
   port: 443,
   isSecure: true,
