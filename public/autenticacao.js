@@ -81,8 +81,6 @@ function configureQlik() {
       $("#popup").hide();
     });
 
-    location.reload();
-
     // var app = qlik.openApp("fcede786-2ffb-47fa-8f0f-92429e09c30b", config);
     // app.visualization.get("02307a04-2de3-48f2-b0e7-28cb78a7a37f").then(function (vis) {
     //   vis.show("QV01");
