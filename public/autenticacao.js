@@ -61,6 +61,8 @@ async function login() {
   if (response.status !== 200) {
     console.log(await response.text());
     throw new Error("Falha no login via JWT");
+  }else{
+    location.reload();
   }
 }
 
