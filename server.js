@@ -25,7 +25,7 @@ app.post("/generate-token", async (req, res) => {
   try {
     const client = await pool.connect(); // Obtém uma conexão do pool
     const query = 'SELECT nome, email FROM public.usuarios WHERE id = $1;'; // Substitua $1 pelo ID do usuário desejado
-    const userId = 3; // Exemplo: ID do usuário
+    const userId = 1; // Exemplo: ID do usuário
     const dbResult = await client.query(query, [userId]); // Executa a query
     const userName = dbResult.rows[0].nome.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); // Obtém o nome do usuário do banco de dados
     const email = dbResult.rows[0].email; // Obtém o nome do usuário do banco de dados

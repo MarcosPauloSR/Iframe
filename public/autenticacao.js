@@ -81,13 +81,13 @@ function configureQlik() {
       $("#popup").hide();
     });
 
-    // var app = qlik.openApp("fcede786-2ffb-47fa-8f0f-92429e09c30b", config);
-    // app.visualization.get("02307a04-2de3-48f2-b0e7-28cb78a7a37f").then(function (vis) {
-    //   vis.show("QV01");
-    // });
-    // app.visualization.get("AZrTszy").then(function (vis) {
-    //   vis.show("QV02");
-    // });
+    // Inserir o iframe no documento após a autenticação
+    // var iframe = document.createElement("iframe");
+    // iframe.style.width = "100%";
+    // iframe.style.height = "400px"; // Defina a altura conforme necessário
+    // iframe.src = "https://2t54o942nfo22c0.us.qlikcloud.com/single/?appid=73294db6-dfa3-4a33-a52b-142ee73a78d4&sheet=GyjdqzV&theme=horizon&opt=ctxmenu,currsel&select=$::Ano,2024&select=$::Status,Ativo"; // Substitua pela URL correta
+    // document.getElementById("iframeContainer").appendChild(iframe); // Certifique-se que "iframeContainer" é o ID do elemento onde o iframe deve ser inserido
+
   });
 }
 
