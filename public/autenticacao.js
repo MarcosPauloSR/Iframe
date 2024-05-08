@@ -82,11 +82,11 @@ function configureQlik() {
     });
 
     // Inserir o iframe no documento após a autenticação
-    // var iframe = document.createElement("iframe");
-    // iframe.style.width = "100%";
-    // iframe.style.height = "400px"; // Defina a altura conforme necessário
-    // iframe.src = "https://2t54o942nfo22c0.us.qlikcloud.com/single/?appid=73294db6-dfa3-4a33-a52b-142ee73a78d4&sheet=GyjdqzV&theme=horizon&opt=ctxmenu,currsel&select=$::Ano,2024&select=$::Status,Ativo"; // Substitua pela URL correta
-    // document.getElementById("iframeContainer").appendChild(iframe); // Certifique-se que "iframeContainer" é o ID do elemento onde o iframe deve ser inserido
+    var iframe = document.createElement("iframe");
+    iframe.style.width = "100%";
+    iframe.style.height = "100%"; // Defina a altura conforme necessário
+    iframe.src = "https://2t54o942nfo22c0.us.qlikcloud.com/single/?appid=73294db6-dfa3-4a33-a52b-142ee73a78d4&sheet=GyjdqzV&theme=horizon&opt=ctxmenu,currsel&select=$::Ano,2024&select=$::Status,Ativo"; // Substitua pela URL correta
+    document.getElementById("iframeContainer").appendChild(iframe); // Certifique-se que "iframeContainer" é o ID do elemento onde o iframe deve ser inserido
 
   });
 }
